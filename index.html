@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 
 <head>
@@ -21,7 +21,7 @@
 
 body
 {
-                background-color: #000000;
+                background-color: #1b0202;
 }
 
 .main {
@@ -40,126 +40,40 @@ body
                 animation-delay: 0s;
   
                 animation-play-state: running;
-                
-                
-
-}
-@keyframes blinker {
-    from { opacity: 1; }
-    to { opacity: 0; }
-  }
-.cardsection {
-                border: white 0.5px solid;
-                border-radius: 5px;
-                position: relative;
-                background-color: #030c1c;
-                overflow: hidden;
-                
-}
-
-.canal {
-                border: var(--color-gray) 1px solid;
-                border-radius: 5px;
-                margin-left: 30px;
-                margin-right: 30px;
-}
-
-.canal:hover {
-                background-color: var(--color-back);
-                border-color: var(--color-gray);
 
 }
 
-@keyframes changeColor {
-                                100% { background-color: var(--color-green); }
-                                0% { background-color: var(--color-gray); }
-}
-
-.line {
-                border-left: var(--color-red) 3px solid;
-                display: block;
-}
-
-.title {
-                color: #fff;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 24px;
-                transform: skew(-35deg);
-}
-
-.header-title{
-                background-color: var(--color-red);
-                background-repeat: no-repeat;
-                block-size: -webkit-fit-content;
-                block-size: -moz-fit-content;
-                block-size: fit-content;
-                display: block;
-                left: -10px;
-                padding: 9px 50px;
-                position: relative;
-                transform: skew(35deg);
-                width: -webkit-fit-content;
-                width: -moz-fit-content;
-                width: fit-content;
-}
-
-.header-title .item-game {
-                color: #fff;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 24px;
-                transform: skew(-35deg);
-}
-
-.text-inlive {
-                color: var(--color-green);
-}
-
-.text-offline {
-                color: var(--color-red);
-}
-
-/* Para navegadores WebKit (Safari y Chrome) */
-        ::-webkit-scrollbar {
-            width: 12px; 
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #262626; 
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #f91e4e; 
-        }
-
-        /* firefox */
-
-        scrollbar-width: thin;
-        scrollbar-color: #262626 #29a700 ;
-}
 
 
-.offline {
+.noinlive {
+             --color-green: rgb(235, 7, 7);
                 width: 10px;
                 height: 10px;
-                background-color: var(--color-red);
+                background-color: var(--color-green);
                 border-radius: 50%;
                 display: inline-block;
-                animation: changeColorOffline .7s infinite;
-                animation-duration: 0.7s;
+                animation: blinker 1s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+                animation-duration: 0.s;
                 animation-timing-function: ease;
                 animation-delay: 0s;
-                animation-iteration-count: infinite;
-                animation-direction: normal;
-                animation-fill-mode: none;
-                animation-play-state: running;                
+  
+                animation-play-state: running;
+
 }
 
+
+
+@keyframes blinker {
+    from { opacity: 2; }
+    to { opacity: 0; }
+  }
+
+
+
+
+
 @keyframes changeColorOffline {
-                                100% { background-color: var(--color-red); }
+                                10% { background-color: var(--color-red); }
                                 0% { background-color: var(--color-gray); }
 }
 
@@ -173,6 +87,12 @@ body
                                 display: none;
                 }
 }
+
+
+ .status-inactive {
+            background-color: #ff0000; 
+        }
+
 </style>
 
                 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -191,15 +111,15 @@ body
 
 </center>
                 
-
 </div>   
 <hr width="100%">
 <div class="max-w-sm rounded overflow-hidden">
 <div class="px-2 sm:px-4">
-<span class="indicator inlive"></span>
-<span style=" color: rgb(7, 235, 7);">Activo</span><a style="color: #f8cc09;">15:00</a>
+<span class=" indicator noinlive"></span>
+
+<span style=" font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(235, 7, 7);">Inactivo</span><a style="color: #f8cc09;"> 15:00</a>
 <div style="color: #fff; font-size: 15px;">Liga Bolivia :Always Ready – Real Tomayapo</div>
-<a href="https://deportesonplus.github.io/gollive/" target="_blank" class="text-center">
+<a href="" target="_blank" class="text-center">
 <div class="text-base  text-white rounded-lg shadow-lg w-20 hover:bg-white hover:text-gray-900 btn-red">
 <p>Link</p>
  </div>
@@ -210,10 +130,10 @@ body
 <hr width="100%">
 <div class="max-w-sm rounded overflow-hidden">
 <div class="px-2 sm:px-4">
-<span class="indicator inlive"></span>
-<span style=" color: rgb(7, 235, 7);">Activo</span><a style="color: #f8cc09;">17:15</a>
+<span class="indicator noinlive"></span>
+<span style=" font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: rgb(235, 7, 7);">Inactivo</span><a style="color: #f8cc09;"> 17:15</a>
 <div style="color: #fff; font-size: 15px;">Liga Bolivia :The Strongest – SA Bulo Bulo</div>
-<a href="https://deportesonplus.github.io/golliveplus/" target="_blank" class="text-center">
+<a href="" target="_blank" class="text-center">
 <div class="text-base text-white rounded-lg shadow-lg w-20 hover:bg-white hover:text-gray-900 btn-red">
 <p>Link</p>
  </div>
@@ -226,14 +146,39 @@ body
 <div class="max-w-sm rounded overflow-hidden">
 <div class="px-2 sm:px-4">
 <span class="indicator inlive"></span>
-<span style=" color: rgb(7, 235, 7);">Activo</span><a style="color: #f8cc09;">19:30</a>
+<span style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(7, 235, 7);">Activo</span><a style="color: #f8cc09;"> 19:30</a>
 <div style="color: #fff; font-size: 15px;">Liga Bolivia :Aurora – Bolívar	 </div>
 <a href="https://deportesonplus.github.io/gollive/" target="_blank" class="text-center">
 <div class="text-base text-white rounded-lg shadow-lg w-20 hover:bg-white hover:text-gray-900 btn-red">
 <p>Link</p>
  </div>
+
+
 </div>   </div> 
 <hr width="100%">
+<div class="max-w-sm rounded overflow-hidden">
+<div class="px-2 sm:px-4">
+<span class="indicator inlive"></span>
+<span style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(7, 235, 7);">Activo</span><a style="color: #f8cc09;"> 21:00</a>
+<div style="color: #fff; font-size: 15px;">Liga MX: Cruz Azul vs León</div>
+<a href="https://deportesonplus.github.io/tudn_usa/" target="_blank" class="text-center">
+<div class="text-base text-white rounded-lg shadow-lg w-20 hover:bg-white hover:text-gray-900 btn-red">
+<p>Link</p>
+ </div>
+</div>   </div> 
+<hr width="100%">
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
